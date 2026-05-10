@@ -11,6 +11,7 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 | Batch | Best score | Submission | Ref |
 |---|---:|---|---:|
 | Dense-region and NMS sweep | 0.34393 | `submission_326_d7_nms034_dense18_yedge2` | 52437539 |
+| NMS ridge refinement | 0.34392 | `submission_347_d8_nms0334_dense18` | 52495349 |
 | Y-edge sweep | 0.34299 | `submission_271_d6_dense18_yedge2_else_best` | 52377852 |
 | Combined bbox/postprocess sweep | 0.34097 | `submission_204_d4_peak_yedge_shrink1` | 52336613 |
 | Shift and rounding sweep | 0.34012 | `submission_151_tail_x094625_y07535_dy3` | 52270359 |
@@ -27,18 +28,20 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 | 1 | 0.34393 | `submission_326_d7_nms034_dense18_yedge2` | 52437539 |
 | 2 | 0.34393 | `submission_329_d7_nms035_dense18_yedge2` | 52437586 |
 | 3 | 0.34393 | `submission_332_d7_nms036_dense18_yedge2` | 52437956 |
-| 4 | 0.34389 | `submission_323_d7_nms032_dense18_yedge2` | 52437451 |
-| 5 | 0.34366 | `submission_333_d7_nms036_dense20_yedge2` | 52437983 |
-| 6 | 0.34365 | `submission_327_d7_nms034_dense20_yedge2` | 52437549 |
-| 7 | 0.34365 | `submission_330_d7_nms035_dense20_yedge2` | 52437616 |
-| 8 | 0.34364 | `submission_331_d7_nms036_dense16_yedge2` | 52437917 |
-| 9 | 0.34363 | `submission_325_d7_nms034_dense16_yedge2` | 52437511 |
-| 10 | 0.34363 | `submission_328_d7_nms035_dense16_yedge2` | 52437567 |
+| 4 | 0.34392 | `submission_347_d8_nms0334_dense18` | 52495349 |
+| 5 | 0.34392 | `submission_355_d8_nms0334_dense17` | 52495501 |
+| 6 | 0.34389 | `submission_323_d7_nms032_dense18_yedge2` | 52437451 |
+| 7 | 0.34389 | `submission_346_d8_nms0325_dense18` | 52495329 |
+| 8 | 0.34388 | `submission_345_d8_nms0305_dense18` | 52495310 |
+| 9 | 0.34382 | `submission_342_d8_nms0302_dense18` | 52495226 |
+| 10 | 0.34377 | `submission_341_d8_nms0301_dense18` | 52495205 |
 
 ## Notes
 
 - Dense-region correction with y-edge adjustment was a stable improvement path.
 - NMS before dense correction improved the best public score to `0.34393`.
+- The NMS ridge refinement did not beat `0.34393`; its best was `0.34392`.
+- The useful NMS threshold region is left of the `0.367+` drop-off, with `0.334` close to the best plateau.
 - Dense correction followed by NMS was consistently weaker.
 - Wide/tall geometry-only rules were negative in the latest batch.
-- The next useful sweep is a finer NMS threshold grid around `0.33-0.37` with dense18.
+- The next useful sweep should stay near the `0.325-0.345` NMS band or move to a new prediction source.

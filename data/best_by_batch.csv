@@ -7,4 +7,5 @@ Shift and rounding sweep,0.34012,151,submission_151_tail_x094625_y07535_dy3,5227
 Scale-grid sweep,0.34012,211,submission_211_x94475_y75300_dy3,52340128,2026-05-05T03:56:20.610Z
 Combined bbox/postprocess sweep,0.34097,204,submission_204_d4_peak_yedge_shrink1,52336613,2026-05-05T01:17:04.907Z
 Y-edge sweep,0.34299,271,submission_271_d6_dense18_yedge2_else_best,52377852,2026-05-06T06:27:16.720Z
+NMS ridge refinement,0.34392,347,submission_347_d8_nms0334_dense18,52495349,2026-05-09T21:23:12.527Z
 Dense-region and NMS sweep,0.34393,326,submission_326_d7_nms034_dense18_yedge2,52437539,2026-05-08T01:11:34.547Z
