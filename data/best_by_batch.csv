@@ -10,3 +10,4 @@ Y-edge sweep,0.34299,271,submission_271_d6_dense18_yedge2_else_best,52377852,202
 NMS ridge refinement,0.34392,347,submission_347_d8_nms0334_dense18,52495349,2026-05-09T21:23:12.527Z
 Dense-region and NMS sweep,0.34393,326,submission_326_d7_nms034_dense18_yedge2,52437539,2026-05-08T01:11:34.547Z
 Table-aware Page CER probes,0.35689,438,submission_438_d9d_table_lowcyr020_min12,52583507,2026-05-12T14:41:29.070Z
+Low-Cyrillic text-length sweep,0.35791,448,submission_448_d10_table_lowcyr20_min18,52598441,2026-05-13T02:54:12.970Z

@@ -10,6 +10,7 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 
 | Batch | Best score | Submission | Ref |
 |---|---:|---|---:|
+| Low-Cyrillic text-length sweep | 0.35791 | `submission_448_d10_table_lowcyr20_min18` | 52598441 |
 | Table-aware Page CER probes | 0.35689 | `submission_438_d9d_table_lowcyr020_min12` | 52583507 |
 | Dense-region and NMS sweep | 0.34393 | `submission_326_d7_nms034_dense18_yedge2` | 52437539 |
 | NMS ridge refinement | 0.34392 | `submission_347_d8_nms0334_dense18` | 52495349 |
@@ -26,16 +27,16 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 
 | Rank | Public score | Submission | Ref |
 |---:|---:|---|---:|
-| 1 | 0.35689 | `submission_438_d9d_table_lowcyr020_min12` | 52583507 |
-| 2 | 0.35659 | `submission_437_d9d_table_lowcyr020_min10` | 52582813 |
-| 3 | 0.35597 | `submission_440_d9d_table_lowcyr010_min8` | 52583831 |
-| 4 | 0.35594 | `submission_439_d9d_table_lowcyr015_min8` | 52583793 |
-| 5 | 0.35584 | `submission_432_d9c_table_lowcyr020_min8` | 52578947 |
-| 6 | 0.35441 | `submission_436_d9d_table_lowcyr020_min6` | 52582261 |
-| 7 | 0.34964 | `submission_431_d9c_table_lowcyr020_min4` | 52578909 |
-| 8 | 0.34943 | `submission_427_d9c_table_lowcyr010` | 52578771 |
-| 9 | 0.34940 | `submission_428_d9c_table_lowcyr015` | 52578810 |
-| 10 | 0.34931 | `submission_433_d9c_best036_table_lowcyr020` | 52578999 |
+| 1 | 0.35791 | `submission_448_d10_table_lowcyr20_min18` | 52598441 |
+| 2 | 0.35762 | `submission_457_d10_table_lowcyr020_min12_no_formula` | 52600445 |
+| 3 | 0.35738 | `submission_443_d10_table_lowcyr18_min14` | 52598072 |
+| 4 | 0.35735 | `submission_451_d10_table_lowcyr22_min14` | 52598922 |
+| 5 | 0.35729 | `submission_445_d10_table_lowcyr20_min14` | 52598272 |
+| 6 | 0.35715 | `submission_452_d10_table_lowcyr22_min16` | 52599236 |
+| 7 | 0.35714 | `submission_469_d10_table_lowcyr020_min12_leaveout_table5` | 52601918 |
+| 8 | 0.35714 | `submission_474_d10_table_occ2_8_only_lowcyr020_min12` | 52602103 |
+| 9 | 0.35713 | `submission_444_d10_table_lowcyr20_min13` | 52598186 |
+| 10 | 0.35710 | `submission_447_d10_table_lowcyr20_min16` | 52598407 |
 
 ## Notes
 
@@ -44,6 +45,8 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 - The NMS ridge refinement did not beat `0.34393`; its best was `0.34392`.
 - The useful NMS threshold region is left of the `0.367+` drop-off, with `0.334` close to the best plateau.
 - Table-region Page CER suppression produced the first clear postprocessing improvement beyond the NMS plateau.
+- Low-Cyrillic text filtering with a moderate minimum text length improved the tracked best public score to `0.35791`.
+- Very broad Latin/digit heuristics and very long minimum-length cutoffs were negative; the useful region was narrower.
 - Dense correction followed by NMS was consistently weaker.
 - Wide/tall geometry-only rules were negative in the latest batch.
-- Further postprocessing should isolate table-region cases and avoid broad printed-text suppression.
+- Further postprocessing should isolate the moderate-length low-Cyrillic region and avoid broad printed-text suppression.
