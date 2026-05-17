@@ -10,7 +10,7 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 
 | Batch | Best score | Submission | Ref |
 |---|---:|---|---:|
-| v1.5 low-Cyrillic peak refinement | 0.35804 | `submission_503_d11_table_lowcyr170_min18` | 52720670 |
+| v1.5 low-Cyrillic peak refinement | 0.36056 | `submission_539_d11b_adapt_table_lowcyr170_min18_top10rows` | 52724982 |
 | Low-Cyrillic text-length sweep | 0.35791 | `submission_448_d10_table_lowcyr20_min18` | 52598441 |
 | Table-aware Page CER probes | 0.35689 | `submission_438_d9d_table_lowcyr020_min12` | 52583507 |
 | Dense-region and NMS sweep | 0.34393 | `submission_326_d7_nms034_dense18_yedge2` | 52437539 |
@@ -28,16 +28,16 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 
 | Rank | Public score | Submission | Ref |
 |---:|---:|---|---:|
-| 1 | 0.35804 | `submission_503_d11_table_lowcyr170_min18` | 52720670 |
-| 2 | 0.35802 | `submission_496_d11_table_lowcyr210_min18` | 52720500 |
-| 3 | 0.35791 | `submission_448_d10_table_lowcyr20_min18` | 52598441 |
-| 4 | 0.35789 | `submission_511_d11_table_lowcyr230_min18` | 52721482 |
-| 5 | 0.35781 | `submission_505_d11_table_lowcyr170_min20` | 52720720 |
-| 6 | 0.35779 | `submission_498_d11_table_lowcyr210_min20` | 52720542 |
-| 7 | 0.35773 | `submission_493_d11_table_lowcyr190_min20` | 52720421 |
-| 8 | 0.35765 | `submission_513_d11_table_lowcyr230_min20` | 52721540 |
-| 9 | 0.35762 | `submission_457_d10_table_lowcyr020_min12_no_formula` | 52600445 |
-| 10 | 0.35759 | `submission_502_d11_table_lowcyr170_min17` | 52720650 |
+| 1 | 0.36056 | `submission_539_d11b_adapt_table_lowcyr170_min18_top10rows` | 52724982 |
+| 2 | 0.36045 | `submission_537_d11b_adapt_table_lowcyr170_min18_rows250_385` | 52724929 |
+| 3 | 0.35874 | `submission_516_d11b_adapt_table_lowcyr170_min18_no_formula` | 52723418 |
+| 4 | 0.35874 | `submission_517_d11b_adapt_table_lowcyr170_min18_only_hand_printed` | 52723463 |
+| 5 | 0.35871 | `submission_518_d11b_adapt_table_lowcyr210_min18_no_formula` | 52723502 |
+| 6 | 0.35871 | `submission_519_d11b_adapt_table_lowcyr210_min18_only_hand_printed` | 52723538 |
+| 7 | 0.35858 | `submission_520_d11b_adapt_table_lowcyr230_min18_no_formula` | 52723569 |
+| 8 | 0.35858 | `submission_521_d11b_adapt_table_lowcyr230_min18_only_hand_printed` | 52723597 |
+| 9 | 0.35847 | `submission_522_d11b_adapt_table_lowcyr170_min20_no_formula` | 52723628 |
+| 10 | 0.35847 | `submission_523_d11b_adapt_table_lowcyr170_min20_only_hand_printed` | 52723672 |
 
 ## Notes
 
