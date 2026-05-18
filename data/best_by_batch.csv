@@ -12,3 +12,4 @@ Dense-region and NMS sweep,0.34393,326,submission_326_d7_nms034_dense18_yedge2,5
 Table-aware Page CER probes,0.35689,438,submission_438_d9d_table_lowcyr020_min12,52583507,2026-05-12T14:41:29.070Z
 Low-Cyrillic text-length sweep,0.35791,448,submission_448_d10_table_lowcyr20_min18,52598441,2026-05-13T02:54:12.970Z
 v1.5 low-Cyrillic peak refinement,0.36056,539,submission_539_d11b_adapt_table_lowcyr170_min18_top10rows,52724982,2026-05-17T01:13:52.900Z
+Top-row low-Cyrillic refinement,0.36106,549,submission_549_d12_top10_drop328_lowcyr170_min18,52764893,2026-05-18T06:05:42.250Z
