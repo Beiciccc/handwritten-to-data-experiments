@@ -10,7 +10,7 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 
 | Batch | Best score | Submission | Ref |
 |---|---:|---|---:|
-| Top-row low-Cyrillic refinement | 0.36106 | `submission_549_d12_top10_drop328_lowcyr170_min18` | 52764893 |
+| Top-row low-Cyrillic refinement | 0.36332 | `submission_588_d12b_drop328_plus_rows300_385` | 52792585 |
 | v1.5 low-Cyrillic peak refinement | 0.36056 | `submission_539_d11b_adapt_table_lowcyr170_min18_top10rows` | 52724982 |
 | Low-Cyrillic text-length sweep | 0.35791 | `submission_448_d10_table_lowcyr20_min18` | 52598441 |
 | Table-aware Page CER probes | 0.35689 | `submission_438_d9d_table_lowcyr020_min12` | 52583507 |
@@ -29,16 +29,16 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 
 | Rank | Public score | Submission | Ref |
 |---:|---:|---|---:|
-| 1 | 0.36106 | `submission_549_d12_top10_drop328_lowcyr170_min18` | 52764893 |
-| 2 | 0.36097 | `submission_544_d12_top10_drop209_lowcyr170_min18` | 52764738 |
-| 3 | 0.36097 | `submission_545_d12_top10_drop212_lowcyr170_min18` | 52764772 |
-| 4 | 0.36087 | `submission_541_d12_top10_drop203_lowcyr170_min18` | 52764648 |
-| 5 | 0.36086 | `submission_546_d12_top10_drop239_lowcyr170_min18` | 52764806 |
-| 6 | 0.36076 | `submission_551_d12_top10_add384_lowcyr170_min18` | 52764956 |
-| 7 | 0.36056 | `submission_539_d11b_adapt_table_lowcyr170_min18_top10rows` | 52724982 |
-| 8 | 0.36049 | `submission_561_d12_top10_lowcyr170_min17` | 52766282 |
-| 9 | 0.36047 | `submission_553_d12_top10_add265_lowcyr170_min18` | 52765016 |
-| 10 | 0.36045 | `submission_537_d11b_adapt_table_lowcyr170_min18_rows250_385` | 52724929 |
+| 1 | 0.36332 | `submission_588_d12b_drop328_plus_rows300_385` | 52792585 |
+| 2 | 0.36324 | `submission_590_d12b_drop328_plus_rows300_349` | 52792662 |
+| 3 | 0.36250 | `submission_580_d12b_top10_drop203_209_212_239_328` | 52791468 |
+| 4 | 0.36221 | `submission_576_d12b_top10_drop203_209_212_328` | 52791367 |
+| 5 | 0.36219 | `submission_577_d12b_top10_drop209_212_239_328` | 52791397 |
+| 6 | 0.36209 | `submission_578_d12b_top10_drop203_209_239_328` | 52791426 |
+| 7 | 0.36209 | `submission_579_d12b_top10_drop203_212_239_328` | 52791450 |
+| 8 | 0.36189 | `submission_570_d12b_top10_drop209_212_328` | 52791167 |
+| 9 | 0.36179 | `submission_571_d12b_top10_drop203_209_328` | 52791207 |
+| 10 | 0.36179 | `submission_573_d12b_top10_drop203_212_328` | 52791276 |
 
 ## Notes
 
