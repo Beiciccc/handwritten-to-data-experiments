@@ -13,3 +13,4 @@ Table-aware Page CER probes,0.35689,438,submission_438_d9d_table_lowcyr020_min12
 Low-Cyrillic text-length sweep,0.35791,448,submission_448_d10_table_lowcyr20_min18,52598441,2026-05-13T02:54:12.970Z
 v1.5 low-Cyrillic peak refinement,0.36056,539,submission_539_d11b_adapt_table_lowcyr170_min18_top10rows,52724982,2026-05-17T01:13:52.900Z
 Top-row low-Cyrillic refinement,0.36332,588,submission_588_d12b_drop328_plus_rows300_385,52792585,2026-05-19T01:12:25.047Z
+v1.6 top-band refinement,0.36490,613,submission_613_d13_bestband_drop203_209_212_239,52837063,2026-05-20T03:56:40.580Z
