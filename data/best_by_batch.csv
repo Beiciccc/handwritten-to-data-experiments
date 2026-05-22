@@ -15,3 +15,4 @@ v1.5 low-Cyrillic peak refinement,0.36056,539,submission_539_d11b_adapt_table_lo
 Top-row low-Cyrillic refinement,0.36332,588,submission_588_d12b_drop328_plus_rows300_385,52792585,2026-05-19T01:12:25.047Z
 v1.6 top-band refinement,0.36490,613,submission_613_d13_bestband_drop203_209_212_239,52837063,2026-05-20T03:56:40.580Z
 v1.6 best-band micro refinement,0.36583,618,submission_618_d14_true_bestdrops_rows300_330,52872132,2026-05-21T04:23:40.780Z
+v1.6 compact-window and dense-min refinement,0.36623,662,submission_662_d15_true_bestdrops_rows300_330_densemin16,52911063,2026-05-22T03:40:54.407Z

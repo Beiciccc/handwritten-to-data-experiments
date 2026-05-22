@@ -10,6 +10,7 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 
 | Batch | Best score | Submission | Ref |
 |---|---:|---|---:|
+| v1.6 compact-window and dense-min refinement | 0.36623 | `submission_662_d15_true_bestdrops_rows300_330_densemin16` | 52911063 |
 | v1.6 best-band micro refinement | 0.36583 | `submission_618_d14_true_bestdrops_rows300_330` | 52872132 |
 | v1.6 top-band refinement | 0.36490 | `submission_613_d13_bestband_drop203_209_212_239` | 52837063 |
 | Top-row low-Cyrillic refinement | 0.36332 | `submission_588_d12b_drop328_plus_rows300_385` | 52792585 |
@@ -31,16 +32,16 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 
 | Rank | Public score | Submission | Ref |
 |---:|---:|---|---:|
-| 1 | 0.36583 | `submission_618_d14_true_bestdrops_rows300_330` | 52872132 |
-| 2 | 0.36569 | `submission_620_d14_bestdrops_rows300_340` | 52872200 |
-| 3 | 0.36544 | `submission_630_d14_bestdrops_rows300_330_plus350_360` | 52872574 |
-| 4 | 0.36540 | `submission_616_d14_true_bestdrops_rows300_385` | 52872075 |
-| 5 | 0.36536 | `submission_617_d14_true_bestdrops_rows300_349` | 52872108 |
-| 6 | 0.36532 | `submission_619_d14_bestdrops_rows300_330` | 52872173 |
-| 7 | 0.36525 | `submission_631_d14_bestdrops_rows300_330_plus366_385` | 52873590 |
-| 8 | 0.36513 | `submission_623_d14_bestdrops_rows300_380` | 52872274 |
-| 9 | 0.36497 | `submission_621_d14_bestdrops_rows300_360` | 52872236 |
-| 10 | 0.36490 | `submission_613_d13_bestband_drop203_209_212_239` | 52837063 |
+| 1 | 0.36623 | `submission_662_d15_true_bestdrops_rows300_330_densemin16` | 52911063 |
+| 2 | 0.36620 | `submission_641_d15_true_bestdrops_rows300_337` | 52908966 |
+| 3 | 0.36594 | `submission_652_d15_true_bestdrops_rows300_330_min17` | 52909553 |
+| 4 | 0.36584 | `submission_659_d15_true_bestdrops_rows300_330_nms360` | 52910969 |
+| 5 | 0.36583 | `submission_618_d14_true_bestdrops_rows300_330` | 52872132 |
+| 6 | 0.36583 | `submission_663_d15_true_bestdrops_rows300_330_densemin17` | 52911087 |
+| 7 | 0.36582 | `submission_658_d15_true_bestdrops_rows300_330_nms335` | 52910918 |
+| 8 | 0.36581 | `submission_656_d15_true_bestdrops_rows300_330_nms320` | 52910849 |
+| 9 | 0.36580 | `submission_655_d15_true_bestdrops_rows300_330_nms310` | 52909739 |
+| 10 | 0.36580 | `submission_657_d15_true_bestdrops_rows300_330_nms325` | 52910882 |
 
 ## Notes
 
@@ -55,6 +56,7 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 - Very broad Latin/digit heuristics and very long minimum-length cutoffs were negative; the useful region was narrower.
 - After the v1.6 train cleanup, true row-328 exclusion with the 300-385 top-band region improved the tracked best score.
 - Combining the best delete set with explicit row-328 exclusion and a compact 300-330 window improved the tracked best score.
+- Compact-window refinement found a stronger 300-337 boundary and a dense-minimum interaction near the 300-330 anchor.
 - Dense correction followed by NMS was consistently weaker.
 - Wide/tall geometry-only rules were negative in the latest batch.
 - Further postprocessing should isolate the moderate-length low-Cyrillic region and avoid broad printed-text suppression.
