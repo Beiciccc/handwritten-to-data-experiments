@@ -16,3 +16,4 @@ Top-row low-Cyrillic refinement,0.36332,588,submission_588_d12b_drop328_plus_row
 v1.6 top-band refinement,0.36490,613,submission_613_d13_bestband_drop203_209_212_239,52837063,2026-05-20T03:56:40.580Z
 v1.6 best-band micro refinement,0.36583,618,submission_618_d14_true_bestdrops_rows300_330,52872132,2026-05-21T04:23:40.780Z
 v1.6 compact-window and dense-min refinement,0.36623,662,submission_662_d15_true_bestdrops_rows300_330_densemin16,52911063,2026-05-22T03:40:54.407Z
+v1.6 dense-boundary refinement,0.36671,685,submission_685_d16_true_bestdrops_rows300_337_densemin16_min17,52944919,2026-05-23T06:20:41.457Z
