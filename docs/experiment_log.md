@@ -10,7 +10,7 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 
 | Batch | Best score | Submission | Ref |
 |---|---:|---|---:|
-| v1.6 dense-boundary refinement | 0.36671 | `submission_685_d16_true_bestdrops_rows300_337_densemin16_min17` | 52944919 |
+| v1.6 dense-min boundary refinement | 0.36671 | `submission_685_d16_true_bestdrops_rows300_337_densemin16_min17` | 52944919 |
 | v1.6 compact-window and dense-min refinement | 0.36623 | `submission_662_d15_true_bestdrops_rows300_330_densemin16` | 52911063 |
 | v1.6 best-band micro refinement | 0.36583 | `submission_618_d14_true_bestdrops_rows300_330` | 52872132 |
 | v1.6 top-band refinement | 0.36490 | `submission_613_d13_bestband_drop203_209_212_239` | 52837063 |
@@ -59,6 +59,7 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 - Combining the best delete set with explicit row-328 exclusion and a compact 300-330 window improved the tracked best score.
 - Compact-window refinement found a stronger 300-337 boundary and a dense-minimum interaction near the 300-330 anchor.
 - Combining the compact 300-337 boundary with dense-minimum correction improved the tracked best score.
+- Dense-minimum and low-Cyrillic minimum-length interactions improved the tracked best score on the compact and 300-337 windows.
 - Dense correction followed by NMS was consistently weaker.
 - Wide/tall geometry-only rules were negative in the latest batch.
 - Further postprocessing should isolate the moderate-length low-Cyrillic region and avoid broad printed-text suppression.
