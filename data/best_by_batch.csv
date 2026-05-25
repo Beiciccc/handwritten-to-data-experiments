@@ -18,3 +18,4 @@ v1.6 best-band micro refinement,0.36583,618,submission_618_d14_true_bestdrops_ro
 v1.6 compact-window and dense-min refinement,0.36623,662,submission_662_d15_true_bestdrops_rows300_330_densemin16,52911063,2026-05-22T03:40:54.407Z
 v1.6 dense-min boundary refinement,0.36671,685,submission_685_d16_true_bestdrops_rows300_337_densemin16_min17,52944919,2026-05-23T06:20:41.457Z
 v1.6 low-Cyrillic minimum refinement,0.36764,686,submission_686_d17_true_bestdrops_rows300_337_densemin16_min13,52977157,2026-05-24T06:42:37.450Z
+v1.6 low-minimum boundary/NMS refinement,0.36765,731,submission_731_d18_true_bestdrops_rows300_337_densemin16_nms360_min13,53014220,2026-05-25T08:57:04.643Z

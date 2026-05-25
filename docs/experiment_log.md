@@ -10,6 +10,7 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 
 | Batch | Best score | Submission | Ref |
 |---|---:|---|---:|
+| v1.6 low-minimum boundary/NMS refinement | 0.36765 | `submission_731_d18_true_bestdrops_rows300_337_densemin16_nms360_min13` | 53014220 |
 | v1.6 low-Cyrillic minimum refinement | 0.36764 | `submission_686_d17_true_bestdrops_rows300_337_densemin16_min13` | 52977157 |
 | v1.6 dense-min boundary refinement | 0.36671 | `submission_685_d16_true_bestdrops_rows300_337_densemin16_min17` | 52944919 |
 | v1.6 compact-window and dense-min refinement | 0.36623 | `submission_662_d15_true_bestdrops_rows300_330_densemin16` | 52911063 |
@@ -34,16 +35,16 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 
 | Rank | Public score | Submission | Ref |
 |---:|---:|---|---:|
-| 1 | 0.36764 | `submission_686_d17_true_bestdrops_rows300_337_densemin16_min13` | 52977157 |
-| 2 | 0.36758 | `submission_687_d17_true_bestdrops_rows300_337_densemin16_min14` | 52977185 |
-| 3 | 0.36728 | `submission_708_d17_true_bestdrops_rows300_330_densemin16_min13` | 52978822 |
-| 4 | 0.36722 | `submission_709_d17_true_bestdrops_rows300_330_densemin16_min14` | 52978856 |
-| 5 | 0.36706 | `submission_688_d17_true_bestdrops_rows300_337_densemin16_min15` | 52977213 |
-| 6 | 0.36671 | `submission_685_d16_true_bestdrops_rows300_337_densemin16_min17` | 52944919 |
-| 7 | 0.36671 | `submission_689_d17_true_bestdrops_rows300_337_densemin16_min16` | 52977240 |
-| 8 | 0.36671 | `submission_691_d17_true_bestdrops_rows300_337_densemin14_min17` | 52977288 |
-| 9 | 0.36671 | `submission_692_d17_true_bestdrops_rows300_337_densemin15_min17` | 52977309 |
-| 10 | 0.36671 | `submission_707_d17_true_bestdrops_rows300_337_densemin16_nms360_min17` | 52978786 |
+| 1 | 0.36765 | `submission_731_d18_true_bestdrops_rows300_337_densemin16_nms360_min13` | 53014220 |
+| 2 | 0.36764 | `submission_686_d17_true_bestdrops_rows300_337_densemin16_min13` | 52977157 |
+| 3 | 0.36764 | `submission_716_d18_true_bestdrops_rows300_337_densemin14_min13` | 53012585 |
+| 4 | 0.36764 | `submission_717_d18_true_bestdrops_rows300_337_densemin15_min13` | 53012632 |
+| 5 | 0.36764 | `submission_720_d18_true_bestdrops_rows300_337_densemin12_min13` | 53012738 |
+| 6 | 0.36764 | `submission_721_d18_true_bestdrops_rows300_337_densemin13_min13` | 53012762 |
+| 7 | 0.36763 | `submission_730_d18_true_bestdrops_rows300_337_densemin16_nms335_min13` | 53014179 |
+| 8 | 0.36762 | `submission_729_d18_true_bestdrops_rows300_337_densemin16_nms320_min13` | 53014127 |
+| 9 | 0.36762 | `submission_734_d18_true_bestdrops_rows300_337_densemin16_nms325_min13` | 53014341 |
+| 10 | 0.36761 | `submission_733_d18_true_bestdrops_rows300_337_densemin16_nms310_min13` | 53014306 |
 
 ## Notes
 
@@ -62,6 +63,7 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 - Combining the compact 300-337 boundary with dense-minimum correction improved the tracked best score.
 - Dense-minimum and low-Cyrillic minimum-length interactions improved the tracked best score on the compact and 300-337 windows.
 - Lowering the low-Cyrillic minimum text length on the 300-337 dense boundary produced the strongest tracked score.
+- NMS360 with the low-Cyrillic min13 filter produced a small tracked best improvement; lower minimum lengths and boundary expansions were negative.
 - Dense correction followed by NMS was consistently weaker.
 - Wide/tall geometry-only rules were negative in the latest batch.
 - Further postprocessing should isolate the moderate-length low-Cyrillic region and avoid broad printed-text suppression.
