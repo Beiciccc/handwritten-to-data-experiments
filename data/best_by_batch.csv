@@ -19,3 +19,5 @@ v1.6 compact-window and dense-min refinement,0.36623,662,submission_662_d15_true
 v1.6 dense-min boundary refinement,0.36671,685,submission_685_d16_true_bestdrops_rows300_337_densemin16_min17,52944919,2026-05-23T06:20:41.457Z
 v1.6 low-Cyrillic minimum refinement,0.36764,686,submission_686_d17_true_bestdrops_rows300_337_densemin16_min13,52977157,2026-05-24T06:42:37.450Z
 v1.6 low-minimum boundary/NMS refinement,0.36765,731,submission_731_d18_true_bestdrops_rows300_337_densemin16_nms360_min13,53014220,2026-05-25T08:57:04.643Z
+v1.6 high-NMS cliff probe,0.36765,742,submission_742_d19_true_bestdrops_rows300_337_densemin12_nms360_min13,53046549,2026-05-26T09:17:07.543Z
+v1.6 NMS360 dense-min rescue,0.36765,742,submission_742_d19b_true_bestdrops_rows300_337_densemin12_nms360_min13,53046466,2026-05-26T09:14:05.117Z

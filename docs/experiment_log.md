@@ -11,6 +11,8 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 | Batch | Best score | Submission | Ref |
 |---|---:|---|---:|
 | v1.6 low-minimum boundary/NMS refinement | 0.36765 | `submission_731_d18_true_bestdrops_rows300_337_densemin16_nms360_min13` | 53014220 |
+| v1.6 high-NMS cliff probe | 0.36765 | `submission_742_d19_true_bestdrops_rows300_337_densemin12_nms360_min13` | 53046549 |
+| v1.6 NMS360 dense-min rescue | 0.36765 | `submission_742_d19b_true_bestdrops_rows300_337_densemin12_nms360_min13` | 53046466 |
 | v1.6 low-Cyrillic minimum refinement | 0.36764 | `submission_686_d17_true_bestdrops_rows300_337_densemin16_min13` | 52977157 |
 | v1.6 dense-min boundary refinement | 0.36671 | `submission_685_d16_true_bestdrops_rows300_337_densemin16_min17` | 52944919 |
 | v1.6 compact-window and dense-min refinement | 0.36623 | `submission_662_d15_true_bestdrops_rows300_330_densemin16` | 52911063 |
@@ -36,15 +38,15 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 | Rank | Public score | Submission | Ref |
 |---:|---:|---|---:|
 | 1 | 0.36765 | `submission_731_d18_true_bestdrops_rows300_337_densemin16_nms360_min13` | 53014220 |
-| 2 | 0.36764 | `submission_686_d17_true_bestdrops_rows300_337_densemin16_min13` | 52977157 |
-| 3 | 0.36764 | `submission_716_d18_true_bestdrops_rows300_337_densemin14_min13` | 53012585 |
-| 4 | 0.36764 | `submission_717_d18_true_bestdrops_rows300_337_densemin15_min13` | 53012632 |
-| 5 | 0.36764 | `submission_720_d18_true_bestdrops_rows300_337_densemin12_min13` | 53012738 |
-| 6 | 0.36764 | `submission_721_d18_true_bestdrops_rows300_337_densemin13_min13` | 53012762 |
-| 7 | 0.36763 | `submission_730_d18_true_bestdrops_rows300_337_densemin16_nms335_min13` | 53014179 |
-| 8 | 0.36762 | `submission_729_d18_true_bestdrops_rows300_337_densemin16_nms320_min13` | 53014127 |
-| 9 | 0.36762 | `submission_734_d18_true_bestdrops_rows300_337_densemin16_nms325_min13` | 53014341 |
-| 10 | 0.36761 | `submission_733_d18_true_bestdrops_rows300_337_densemin16_nms310_min13` | 53014306 |
+| 2 | 0.36765 | `submission_742_d19_true_bestdrops_rows300_337_densemin12_nms360_min13` | 53046549 |
+| 3 | 0.36765 | `submission_742_d19b_true_bestdrops_rows300_337_densemin12_nms360_min13` | 53046466 |
+| 4 | 0.36765 | `submission_743_d19b_true_bestdrops_rows300_337_densemin13_nms360_min13` | 53046505 |
+| 5 | 0.36765 | `submission_744_d19b_true_bestdrops_rows300_337_densemin14_nms360_min13` | 53046536 |
+| 6 | 0.36765 | `submission_745_d19b_true_bestdrops_rows300_337_densemin15_nms360_min13` | 53046578 |
+| 7 | 0.36764 | `submission_686_d17_true_bestdrops_rows300_337_densemin16_min13` | 52977157 |
+| 8 | 0.36764 | `submission_716_d18_true_bestdrops_rows300_337_densemin14_min13` | 53012585 |
+| 9 | 0.36764 | `submission_717_d18_true_bestdrops_rows300_337_densemin15_min13` | 53012632 |
+| 10 | 0.36764 | `submission_720_d18_true_bestdrops_rows300_337_densemin12_min13` | 53012738 |
 
 ## Notes
 
@@ -64,6 +66,8 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 - Dense-minimum and low-Cyrillic minimum-length interactions improved the tracked best score on the compact and 300-337 windows.
 - Lowering the low-Cyrillic minimum text length on the 300-337 dense boundary produced the strongest tracked score.
 - NMS360 with the low-Cyrillic min13 filter produced a small tracked best improvement; lower minimum lengths and boundary expansions were negative.
+- High-side NMS probes at `0.367+` were negative; NMS360 dense-min variants tied the tracked best but did not improve it.
+- On the 300-337 boundary, min13 remained strongest; min12 and min14 were slightly weaker, while 300-335 and 300-342 boundary moves were negative.
 - Dense correction followed by NMS was consistently weaker.
 - Wide/tall geometry-only rules were negative in the latest batch.
 - Further postprocessing should isolate the moderate-length low-Cyrillic region and avoid broad printed-text suppression.
