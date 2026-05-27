@@ -14,6 +14,7 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 | v1.6 high-NMS cliff probe | 0.36765 | `submission_742_d19_true_bestdrops_rows300_337_densemin12_nms360_min13` | 53046549 |
 | v1.6 NMS360 dense-min rescue | 0.36765 | `submission_742_d19b_true_bestdrops_rows300_337_densemin12_nms360_min13` | 53046466 |
 | v1.6 low-Cyrillic minimum refinement | 0.36764 | `submission_686_d17_true_bestdrops_rows300_337_densemin16_min13` | 52977157 |
+| v1.6 plateau escape probes | 0.36763 | `submission_776_d20_true_bestdrops_rows300_337_densemin12_nms335_min13` | 53068116 |
 | v1.6 dense-min boundary refinement | 0.36671 | `submission_685_d16_true_bestdrops_rows300_337_densemin16_min17` | 52944919 |
 | v1.6 compact-window and dense-min refinement | 0.36623 | `submission_662_d15_true_bestdrops_rows300_330_densemin16` | 52911063 |
 | v1.6 best-band micro refinement | 0.36583 | `submission_618_d14_true_bestdrops_rows300_330` | 52872132 |
@@ -68,6 +69,7 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 - NMS360 with the low-Cyrillic min13 filter produced a small tracked best improvement; lower minimum lengths and boundary expansions were negative.
 - High-side NMS probes at `0.367+` were negative; NMS360 dense-min variants tied the tracked best but did not improve it.
 - On the 300-337 boundary, min13 remained strongest; min12 and min14 were slightly weaker, while 300-335 and 300-342 boundary moves were negative.
+- Plateau escape probes did not improve the tracked best; NMS330/335 variants were stable but slightly weaker, and core-drop reversals, row perturbations, and broad type gates were negative.
 - Dense correction followed by NMS was consistently weaker.
 - Wide/tall geometry-only rules were negative in the latest batch.
 - Further postprocessing should isolate the moderate-length low-Cyrillic region and avoid broad printed-text suppression.
