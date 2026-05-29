@@ -4,12 +4,14 @@
 
 The tracked work started from submission-format validation and then focused on
 postprocessing public baseline outputs. The strongest improvement so far comes
-from applying non-maximum suppression before dense-region geometry adjustment.
+from combining the compact row/text filter with a stronger dense-region
+geometry expansion.
 
 ## Best By Batch
 
 | Batch | Best score | Submission | Ref |
 |---|---:|---|---:|
+| v1.6 left-NMS and dense-edge probes | 0.36791 | `submission_804_d21_true_bestdrops_rows300_337_denseamt3_sparse1_min13` | 53133004 |
 | v1.6 low-minimum boundary/NMS refinement | 0.36765 | `submission_731_d18_true_bestdrops_rows300_337_densemin16_nms360_min13` | 53014220 |
 | v1.6 high-NMS cliff probe | 0.36765 | `submission_742_d19_true_bestdrops_rows300_337_densemin12_nms360_min13` | 53046549 |
 | v1.6 NMS360 dense-min rescue | 0.36765 | `submission_742_d19b_true_bestdrops_rows300_337_densemin12_nms360_min13` | 53046466 |
@@ -38,16 +40,16 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 
 | Rank | Public score | Submission | Ref |
 |---:|---:|---|---:|
-| 1 | 0.36765 | `submission_731_d18_true_bestdrops_rows300_337_densemin16_nms360_min13` | 53014220 |
-| 2 | 0.36765 | `submission_742_d19_true_bestdrops_rows300_337_densemin12_nms360_min13` | 53046549 |
-| 3 | 0.36765 | `submission_742_d19b_true_bestdrops_rows300_337_densemin12_nms360_min13` | 53046466 |
-| 4 | 0.36765 | `submission_743_d19b_true_bestdrops_rows300_337_densemin13_nms360_min13` | 53046505 |
-| 5 | 0.36765 | `submission_744_d19b_true_bestdrops_rows300_337_densemin14_nms360_min13` | 53046536 |
-| 6 | 0.36765 | `submission_745_d19b_true_bestdrops_rows300_337_densemin15_nms360_min13` | 53046578 |
-| 7 | 0.36764 | `submission_686_d17_true_bestdrops_rows300_337_densemin16_min13` | 52977157 |
-| 8 | 0.36764 | `submission_716_d18_true_bestdrops_rows300_337_densemin14_min13` | 53012585 |
-| 9 | 0.36764 | `submission_717_d18_true_bestdrops_rows300_337_densemin15_min13` | 53012632 |
-| 10 | 0.36764 | `submission_720_d18_true_bestdrops_rows300_337_densemin12_min13` | 53012738 |
+| 1 | 0.36791 | `submission_804_d21_true_bestdrops_rows300_337_denseamt3_sparse1_min13` | 53133004 |
+| 2 | 0.36765 | `submission_731_d18_true_bestdrops_rows300_337_densemin16_nms360_min13` | 53014220 |
+| 3 | 0.36765 | `submission_742_d19_true_bestdrops_rows300_337_densemin12_nms360_min13` | 53046549 |
+| 4 | 0.36765 | `submission_742_d19b_true_bestdrops_rows300_337_densemin12_nms360_min13` | 53046466 |
+| 5 | 0.36765 | `submission_743_d19b_true_bestdrops_rows300_337_densemin13_nms360_min13` | 53046505 |
+| 6 | 0.36765 | `submission_744_d19b_true_bestdrops_rows300_337_densemin14_nms360_min13` | 53046536 |
+| 7 | 0.36765 | `submission_745_d19b_true_bestdrops_rows300_337_densemin15_nms360_min13` | 53046578 |
+| 8 | 0.36765 | `submission_798_d21_true_bestdrops_rows300_337_stable360_densemin12_min13` | 53131855 |
+| 9 | 0.36765 | `submission_799_d21_true_bestdrops_rows300_337_stable360_densemin13_min13` | 53131886 |
+| 10 | 0.36765 | `submission_800_d21_true_bestdrops_rows300_337_stable360_densemin14_min13` | 53131919 |
 
 ## Notes
 
@@ -70,6 +72,7 @@ from applying non-maximum suppression before dense-region geometry adjustment.
 - High-side NMS probes at `0.367+` were negative; NMS360 dense-min variants tied the tracked best but did not improve it.
 - On the 300-337 boundary, min13 remained strongest; min12 and min14 were slightly weaker, while 300-335 and 300-342 boundary moves were negative.
 - Plateau escape probes did not improve the tracked best; NMS330/335 variants were stable but slightly weaker, and core-drop reversals, row perturbations, and broad type gates were negative.
+- Left-side NMS probes were weaker, but increasing the dense-row y-edge expansion while keeping the sparse-row expansion fixed produced a new tracked best.
 - Dense correction followed by NMS was consistently weaker.
-- Wide/tall geometry-only rules were negative in the latest batch.
-- Further postprocessing should isolate the moderate-length low-Cyrillic region and avoid broad printed-text suppression.
+- Uniform y-edge expansion was negative; the useful geometry change was selective expansion for dense rows only.
+- Further postprocessing should refine the dense-row geometry expansion around the NMS360 and low-Cyrillic min13 plateau.

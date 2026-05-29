@@ -9,10 +9,10 @@ or machine-specific environment details.
 
 ## Current Best
 
-- Public score: `0.36765`
-- Submission: `submission_731_d18_true_bestdrops_rows300_337_densemin16_nms360_min13`
-- Kaggle submission ref: `53014220`
-- Date: `2026-05-25T08:57:04.643Z`
+- Public score: `0.36791`
+- Submission: `submission_804_d21_true_bestdrops_rows300_337_denseamt3_sparse1_min13`
+- Kaggle submission ref: `53133004`
+- Date: `2026-05-29T00:42:48.090Z`
 
 ## Contents
 
@@ -22,4 +22,4 @@ or machine-specific environment details.
 - `data/best_by_batch.csv` - best submission from each experiment batch.
 - `data/top_submissions.csv` - top ranked tracked submissions.
 
-Last updated: 2026-05-27 02:22:33 UTC
+Last updated: 2026-05-29 00:53:55 UTC

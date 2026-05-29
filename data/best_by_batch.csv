@@ -22,3 +22,4 @@ v1.6 low-Cyrillic minimum refinement,0.36764,686,submission_686_d17_true_bestdro
 v1.6 low-minimum boundary/NMS refinement,0.36765,731,submission_731_d18_true_bestdrops_rows300_337_densemin16_nms360_min13,53014220,2026-05-25T08:57:04.643Z
 v1.6 high-NMS cliff probe,0.36765,742,submission_742_d19_true_bestdrops_rows300_337_densemin12_nms360_min13,53046549,2026-05-26T09:17:07.543Z
 v1.6 NMS360 dense-min rescue,0.36765,742,submission_742_d19b_true_bestdrops_rows300_337_densemin12_nms360_min13,53046466,2026-05-26T09:14:05.117Z
+v1.6 left-NMS and dense-edge probes,0.36791,804,submission_804_d21_true_bestdrops_rows300_337_denseamt3_sparse1_min13,53133004,2026-05-29T00:42:48.090Z
