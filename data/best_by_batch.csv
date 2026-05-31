@@ -24,3 +24,4 @@ v1.6 high-NMS cliff probe,0.36765,742,submission_742_d19_true_bestdrops_rows300_
 v1.6 NMS360 dense-min rescue,0.36765,742,submission_742_d19b_true_bestdrops_rows300_337_densemin12_nms360_min13,53046466,2026-05-26T09:14:05.117Z
 v1.6 left-NMS and dense-edge probes,0.36791,804,submission_804_d21_true_bestdrops_rows300_337_denseamt3_sparse1_min13,53133004,2026-05-29T00:42:48.090Z
 v1.6 dense-edge expansion refinement,0.37592,817,submission_817_d22_denseamt4_sparse1_densemin16_nms360_min13,53149629,2026-05-29T11:24:48.543Z
+v1.6 yedge5 and asymmetry refinement,0.37991,832,submission_832_d23_denseamt5_sparse1_densemin16_nms360_min13,53205029,2026-05-31T05:17:54.140Z
