@@ -25,3 +25,4 @@ v1.6 NMS360 dense-min rescue,0.36765,742,submission_742_d19b_true_bestdrops_rows
 v1.6 left-NMS and dense-edge probes,0.36791,804,submission_804_d21_true_bestdrops_rows300_337_denseamt3_sparse1_min13,53133004,2026-05-29T00:42:48.090Z
 v1.6 dense-edge expansion refinement,0.37592,817,submission_817_d22_denseamt4_sparse1_densemin16_nms360_min13,53149629,2026-05-29T11:24:48.543Z
 v1.6 yedge5 and asymmetry refinement,0.37991,832,submission_832_d23_denseamt5_sparse1_densemin16_nms360_min13,53205029,2026-05-31T05:17:54.140Z
+v1.6 yedge6 expansion refinement,0.40377,866,submission_866_d24_denseamt7_sparse1_densemin15_nms360_min13,53237101,2026-06-01T02:31:37.927Z
