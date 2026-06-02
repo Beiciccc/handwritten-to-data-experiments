@@ -11,6 +11,7 @@ geometry expansion.
 
 | Batch | Best score | Submission | Ref |
 |---|---:|---|---:|
+| v1.6 yedge8 and yedge9 expansion | 0.45153 | `submission_888_d25_denseamt9_sparse1_densemin14_nms360_min13` | 53272035 |
 | v1.6 yedge6 expansion refinement | 0.40377 | `submission_866_d24_denseamt7_sparse1_densemin15_nms360_min13` | 53237101 |
 | v1.6 yedge5 and asymmetry refinement | 0.37991 | `submission_832_d23_denseamt5_sparse1_densemin16_nms360_min13` | 53205029 |
 | v1.6 dense-edge expansion refinement | 0.37592 | `submission_817_d22_denseamt4_sparse1_densemin16_nms360_min13` | 53149629 |
@@ -43,16 +44,16 @@ geometry expansion.
 
 | Rank | Public score | Submission | Ref |
 |---:|---:|---|---:|
-| 1 | 0.40377 | `submission_866_d24_denseamt7_sparse1_densemin15_nms360_min13` | 53237101 |
-| 2 | 0.40377 | `submission_867_d24_denseamt7_sparse1_densemin16_nms360_min13` | 53237141 |
-| 3 | 0.39954 | `submission_868_d24_denseamt7_sparse1_densemin14_nms360_min13` | 53237164 |
-| 4 | 0.38753 | `submission_851_d24_denseamt6_sparse1_densemin15_nms360_min13` | 53235931 |
-| 5 | 0.38753 | `submission_852_d24_denseamt6_sparse1_densemin16_nms360_min13` | 53235960 |
-| 6 | 0.38753 | `submission_857_d24_denseamt6_sparse0_densemin15_nms360_min13` | 53236110 |
-| 7 | 0.38753 | `submission_858_d24_denseamt6_sparse0_densemin16_nms360_min13` | 53236135 |
-| 8 | 0.38388 | `submission_853_d24_denseamt6_sparse1_densemin14_nms360_min13` | 53236001 |
-| 9 | 0.38388 | `submission_856_d24_denseamt6_sparse1_densemin13_nms360_min13` | 53236080 |
-| 10 | 0.38388 | `submission_859_d24_denseamt6_sparse0_densemin14_nms360_min13` | 53236169 |
+| 1 | 0.45153 | `submission_888_d25_denseamt9_sparse1_densemin14_nms360_min13` | 53272035 |
+| 2 | 0.45153 | `submission_898_d25_denseamt10_sparse1_densemin14_nms360_min13` | 53273372 |
+| 3 | 0.43391 | `submission_886_d25_denseamt9_sparse1_densemin15_nms360_min13` | 53271965 |
+| 4 | 0.43391 | `submission_887_d25_denseamt9_sparse1_densemin16_nms360_min13` | 53271999 |
+| 5 | 0.43391 | `submission_889_d25_denseamt9_sparse0_densemin15_nms360_min13` | 53272100 |
+| 6 | 0.43391 | `submission_890_d25_denseamt9_sparse0_densemin16_nms360_min13` | 53272149 |
+| 7 | 0.43391 | `submission_896_d25_denseamt10_sparse1_densemin16_nms360_min13` | 53273307 |
+| 8 | 0.43391 | `submission_897_d25_denseamt10_sparse1_densemin15_nms360_min13` | 53273338 |
+| 9 | 0.41564 | `submission_879_d25_denseamt8_sparse1_densemin15_nms360_min13` | 53271721 |
+| 10 | 0.41564 | `submission_880_d25_denseamt8_sparse1_densemin16_nms360_min13` | 53271747 |
 
 ## Notes
 
@@ -79,6 +80,7 @@ geometry expansion.
 - Dense-row y-edge expansion remained the strongest postprocessing lever; yedge4 for dense rows with a high dense-count gate produced a large tracked best improvement.
 - Increasing dense-row y-edge expansion to five pixels improved the tracked best again; the useful gate stayed narrow around densemin15-16, while asymmetric expansion was weaker.
 - Increasing dense-row y-edge expansion to seven pixels improved the tracked best again; densemin15-16 remained the best gate, while tighter gates and asymmetric variants were weaker.
+- Dense-row y-edge expansion continued to improve at eight and nine pixels; yedge9 with densemin14 produced the strongest tracked score, while densemin17+ remained sharply negative.
 - Dense correction followed by NMS was consistently weaker.
 - Uniform y-edge expansion was negative; the useful geometry change was selective expansion for dense rows only.
 - Further postprocessing should refine the dense-row geometry expansion around the NMS360 and low-Cyrillic min13 plateau.
