@@ -27,3 +27,4 @@ v1.6 dense-edge expansion refinement,0.37592,817,submission_817_d22_denseamt4_sp
 v1.6 yedge5 and asymmetry refinement,0.37991,832,submission_832_d23_denseamt5_sparse1_densemin16_nms360_min13,53205029,2026-05-31T05:17:54.140Z
 v1.6 yedge6 expansion refinement,0.40377,866,submission_866_d24_denseamt7_sparse1_densemin15_nms360_min13,53237101,2026-06-01T02:31:37.927Z
 v1.6 yedge8 and yedge9 expansion,0.45153,888,submission_888_d25_denseamt9_sparse1_densemin14_nms360_min13,53272035,2026-06-02T01:14:45.957Z
+v1.6 yedge10-13 plateau refinement,0.45153,901,submission_901_d26_denseamt10_sparse0_densemin14_nms360_min13,53313246,2026-06-03T04:23:27.200Z
