@@ -13,6 +13,7 @@ geometry expansion.
 |---|---:|---|---:|
 | v1.6 yedge8 and yedge9 expansion | 0.45153 | `submission_888_d25_denseamt9_sparse1_densemin14_nms360_min13` | 53272035 |
 | v1.6 yedge10-13 plateau refinement | 0.45153 | `submission_901_d26_denseamt10_sparse0_densemin14_nms360_min13` | 53313246 |
+| v1.6 yedge14-16 boundary refinement | 0.45153 | `submission_926_d27_denseamt14_sparse1_densemin14_nms360_min13` | 53344951 |
 | v1.6 yedge6 expansion refinement | 0.40377 | `submission_866_d24_denseamt7_sparse1_densemin15_nms360_min13` | 53237101 |
 | v1.6 yedge5 and asymmetry refinement | 0.37991 | `submission_832_d23_denseamt5_sparse1_densemin16_nms360_min13` | 53205029 |
 | v1.6 dense-edge expansion refinement | 0.37592 | `submission_817_d22_denseamt4_sparse1_densemin16_nms360_min13` | 53149629 |
@@ -83,6 +84,7 @@ geometry expansion.
 - Increasing dense-row y-edge expansion to seven pixels improved the tracked best again; densemin15-16 remained the best gate, while tighter gates and asymmetric variants were weaker.
 - Dense-row y-edge expansion continued to improve at eight and nine pixels; yedge9 with densemin14 produced the strongest tracked score, while densemin17+ remained sharply negative.
 - The yedge10-13 refinement did not improve the tracked best, but showed a broad plateau across densemin12-14 and sparse0/1; NMS359 and text minimum changes were slightly weaker.
+- The yedge14-16 boundary refinement also tied the plateau across densemin12-14 and sparse0/1; densemin15 was sharply negative, rows300-336 was weaker, and small x-scale moves tied but did not improve the best.
 - Dense correction followed by NMS was consistently weaker.
 - Uniform y-edge expansion was negative; the useful geometry change was selective expansion for dense rows only.
 - Further postprocessing should refine the dense-row geometry expansion around the NMS360 and low-Cyrillic min13 plateau.
