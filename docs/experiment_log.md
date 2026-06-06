@@ -11,6 +11,7 @@ geometry expansion.
 
 | Batch | Best score | Submission | Ref |
 |---|---:|---|---:|
+| v1.6 bottom-heavy asymmetric yedge refinement | 0.45181 | `submission_980_d29_dense_top11_bottom18_sparse11_densemin14_nms360_min13` | 53407719 |
 | v1.6 asymmetric yedge boundary refinement | 0.45174 | `submission_975_d28_dense_top12_bottom17_sparse11_densemin14_nms360_min13` | 53379359 |
 | v1.6 yedge8 and yedge9 expansion | 0.45153 | `submission_888_d25_denseamt9_sparse1_densemin14_nms360_min13` | 53272035 |
 | v1.6 yedge10-13 plateau refinement | 0.45153 | `submission_901_d26_denseamt10_sparse0_densemin14_nms360_min13` | 53313246 |
@@ -47,16 +48,16 @@ geometry expansion.
 
 | Rank | Public score | Submission | Ref |
 |---:|---:|---|---:|
-| 1 | 0.45174 | `submission_975_d28_dense_top12_bottom17_sparse11_densemin14_nms360_min13` | 53379359 |
-| 2 | 0.45153 | `submission_888_d25_denseamt9_sparse1_densemin14_nms360_min13` | 53272035 |
-| 3 | 0.45153 | `submission_898_d25_denseamt10_sparse1_densemin14_nms360_min13` | 53273372 |
-| 4 | 0.45153 | `submission_901_d26_denseamt10_sparse0_densemin14_nms360_min13` | 53313246 |
-| 5 | 0.45153 | `submission_902_d26_denseamt10_sparse0_densemin13_nms360_min13` | 53313285 |
-| 6 | 0.45153 | `submission_903_d26_denseamt10_sparse0_densemin12_nms360_min13` | 53313341 |
-| 7 | 0.45153 | `submission_904_d26_denseamt10_sparse1_densemin13_nms360_min13` | 53313383 |
-| 8 | 0.45153 | `submission_905_d26_denseamt10_sparse1_densemin12_nms360_min13` | 53313436 |
-| 9 | 0.45153 | `submission_906_d26_denseamt11_sparse1_densemin14_nms360_min13` | 53313474 |
-| 10 | 0.45153 | `submission_907_d26_denseamt11_sparse1_densemin13_nms360_min13` | 53313507 |
+| 1 | 0.45181 | `submission_980_d29_dense_top11_bottom18_sparse11_densemin14_nms360_min13` | 53407719 |
+| 2 | 0.45181 | `submission_982_d29_dense_top10_bottom17_sparse11_densemin14_nms360_min13` | 53407776 |
+| 3 | 0.45181 | `submission_983_d29_dense_top12_bottom19_sparse11_densemin14_nms360_min13` | 53407806 |
+| 4 | 0.45181 | `submission_985_d29_dense_top10_bottom18_sparse11_densemin14_nms360_min13` | 53407847 |
+| 5 | 0.45181 | `submission_986_d29_dense_top12_bottom20_sparse11_densemin14_nms360_min13` | 53407880 |
+| 6 | 0.45181 | `submission_987_d29_dense_top9_bottom17_sparse11_densemin14_nms360_min13` | 53407912 |
+| 7 | 0.45175 | `submission_977_d29_dense_top12_bottom16_sparse11_densemin14_nms360_min13` | 53407635 |
+| 8 | 0.45175 | `submission_979_d29_dense_top13_bottom17_sparse11_densemin14_nms360_min13` | 53407695 |
+| 9 | 0.45175 | `submission_989_d29_dense_top12_bottom17_sparse11_densemin12_nms360_min13` | 53407956 |
+| 10 | 0.45175 | `submission_990_d29_dense_top12_bottom17_sparse11_densemin11_nms360_min13` | 53408000 |
 
 ## Notes
 
@@ -87,6 +88,7 @@ geometry expansion.
 - The yedge10-13 refinement did not improve the tracked best, but showed a broad plateau across densemin12-14 and sparse0/1; NMS359 and text minimum changes were slightly weaker.
 - The yedge14-16 boundary refinement also tied the plateau across densemin12-14 and sparse0/1; densemin15 was sharply negative, rows300-336 was weaker, and small x-scale moves tied but did not improve the best.
 - Asymmetric y-edge expansion found a new tracked best: top12/bottom17 improved to `0.45174`, while the opposite top17/bottom12 tied the plateau; ceil-in rounding was sharply negative.
+- Bottom-heavy asymmetric y-edge refinement improved the tracked best to `0.45181`; top9-12 with bottom17-20 formed the best plateau, while sparse12/sparse21 were sharply negative and NMS355 was slightly weaker.
 - Dense correction followed by NMS was consistently weaker.
 - Uniform y-edge expansion was negative; the useful geometry change was selective expansion for dense rows only.
 - Further postprocessing should refine the dense-row geometry expansion around the NMS360 and low-Cyrillic min13 plateau.

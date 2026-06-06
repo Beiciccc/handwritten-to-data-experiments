@@ -30,3 +30,4 @@ v1.6 yedge8 and yedge9 expansion,0.45153,888,submission_888_d25_denseamt9_sparse
 v1.6 yedge10-13 plateau refinement,0.45153,901,submission_901_d26_denseamt10_sparse0_densemin14_nms360_min13,53313246,2026-06-03T04:23:27.200Z
 v1.6 yedge14-16 boundary refinement,0.45153,926,submission_926_d27_denseamt14_sparse1_densemin14_nms360_min13,53344951,2026-06-04T01:06:47.873Z
 v1.6 asymmetric yedge boundary refinement,0.45174,975,submission_975_d28_dense_top12_bottom17_sparse11_densemin14_nms360_min13,53379359,2026-06-05T02:59:10.530Z
+v1.6 bottom-heavy asymmetric yedge refinement,0.45181,980,submission_980_d29_dense_top11_bottom18_sparse11_densemin14_nms360_min13,53407719,2026-06-06T03:02:01.737Z
