@@ -33,3 +33,4 @@ v1.6 asymmetric yedge boundary refinement,0.45174,975,submission_975_d28_dense_t
 v1.6 bottom-heavy asymmetric yedge refinement,0.45181,980,submission_980_d29_dense_top11_bottom18_sparse11_densemin14_nms360_min13,53407719,2026-06-06T03:02:01.737Z
 v1.6 sparse02 asymmetric yedge interaction,0.45182,1021,submission_1021_d30_dense_top10_bottom18_sparse02_densemin14_nms360_min13,53444206,2026-06-07T07:46:17.990Z
 v1.6 sparse02 plateau refinement,0.45182,1026,submission_1026_d31_dense_top11_bottom19_sparse02_densemin14_nms360_min13,53478944,2026-06-08T13:35:16.893Z
+v1.6 sparse plateau edge recovery,0.45182,1066,submission_1066_d32_dense_top10_bottom18_sparse02_densemin11_nms360_min13,53493238,2026-06-09T03:15:06.697Z

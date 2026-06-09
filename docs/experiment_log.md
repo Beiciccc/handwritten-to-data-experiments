@@ -13,6 +13,7 @@ geometry expansion.
 |---|---:|---|---:|
 | v1.6 sparse02 asymmetric yedge interaction | 0.45182 | `submission_1021_d30_dense_top10_bottom18_sparse02_densemin14_nms360_min13` | 53444206 |
 | v1.6 sparse02 plateau refinement | 0.45182 | `submission_1026_d31_dense_top11_bottom19_sparse02_densemin14_nms360_min13` | 53478944 |
+| v1.6 sparse plateau edge recovery | 0.45182 | `submission_1066_d32_dense_top10_bottom18_sparse02_densemin11_nms360_min13` | 53493238 |
 | v1.6 bottom-heavy asymmetric yedge refinement | 0.45181 | `submission_980_d29_dense_top11_bottom18_sparse11_densemin14_nms360_min13` | 53407719 |
 | v1.6 asymmetric yedge boundary refinement | 0.45174 | `submission_975_d28_dense_top12_bottom17_sparse11_densemin14_nms360_min13` | 53379359 |
 | v1.6 yedge8 and yedge9 expansion | 0.45153 | `submission_888_d25_denseamt9_sparse1_densemin14_nms360_min13` | 53272035 |
@@ -93,6 +94,7 @@ geometry expansion.
 - Bottom-heavy asymmetric y-edge refinement improved the tracked best to `0.45181`; top9-12 with bottom17-20 formed the best plateau, while sparse12/sparse21 were sharply negative and NMS355 was slightly weaker.
 - Sparse02 interaction on asymmetric y-edge best cells improved the tracked best to `0.45182`; direct top/bottom extrapolation mostly dropped, while densemin13, sortybucket, and floor-out tied but did not improve.
 - Sparse02 plateau refinement did not improve beyond `0.45182`; sparse02 widened the best plateau across many top/bottom anchors, while bottom extrapolation stayed weak and densemin12/13, sortybucket, and floor-out only tied.
+- Sparse plateau edge recovery did not improve beyond `0.45182`; sparse03 collapsed to the raw-score band, rows300-336 was negative, and densemin11 plus small x/y scale moves only tied.
 - Dense correction followed by NMS was consistently weaker.
 - Uniform y-edge expansion was negative; the useful geometry change was selective expansion for dense rows only.
 - Further postprocessing should refine the dense-row geometry expansion around the NMS360 and low-Cyrillic min13 plateau.
