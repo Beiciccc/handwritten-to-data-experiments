@@ -11,6 +11,8 @@ geometry expansion.
 
 | Batch | Best score | Submission | Ref |
 |---|---:|---|---:|
+| v1.6 duplicate-text rescue refinement | 0.45563 | `submission_1097_d33r_dedup_exact_keep2` | 53522493 |
+| v1.6 source-routing and text-cleaning probes | 0.45187 | `submission_1076_d33_source_university_day25_else_d32best` | 53520977 |
 | v1.6 sparse02 asymmetric yedge interaction | 0.45182 | `submission_1021_d30_dense_top10_bottom18_sparse02_densemin14_nms360_min13` | 53444206 |
 | v1.6 sparse02 plateau refinement | 0.45182 | `submission_1026_d31_dense_top11_bottom19_sparse02_densemin14_nms360_min13` | 53478944 |
 | v1.6 sparse plateau edge recovery | 0.45182 | `submission_1066_d32_dense_top10_bottom18_sparse02_densemin11_nms360_min13` | 53493238 |
@@ -51,16 +53,16 @@ geometry expansion.
 
 | Rank | Public score | Submission | Ref |
 |---:|---:|---|---:|
-| 1 | 0.45182 | `submission_1021_d30_dense_top10_bottom18_sparse02_densemin14_nms360_min13` | 53444206 |
-| 2 | 0.45182 | `submission_1022_d30_dense_top12_bottom20_sparse02_densemin14_nms360_min13` | 53444242 |
-| 3 | 0.45182 | `submission_1026_d31_dense_top11_bottom19_sparse02_densemin14_nms360_min13` | 53478944 |
-| 4 | 0.45182 | `submission_1027_d31_dense_top11_bottom18_sparse02_densemin14_nms360_min13` | 53478987 |
-| 5 | 0.45182 | `submission_1028_d31_dense_top12_bottom19_sparse02_densemin14_nms360_min13` | 53479025 |
-| 6 | 0.45182 | `submission_1029_d31_dense_top10_bottom17_sparse02_densemin14_nms360_min13` | 53479072 |
-| 7 | 0.45182 | `submission_1030_d31_dense_top13_bottom20_sparse02_densemin14_nms360_min13` | 53479119 |
-| 8 | 0.45182 | `submission_1031_d31_dense_top9_bottom17_sparse02_densemin14_nms360_min13` | 53479158 |
-| 9 | 0.45182 | `submission_1032_d31_dense_top8_bottom16_sparse02_densemin14_nms360_min13` | 53479185 |
-| 10 | 0.45182 | `submission_1041_d31_dense_top10_bottom18_sparse02_densemin13_nms360_min13` | 53480691 |
+| 1 | 0.45563 | `submission_1097_d33r_dedup_exact_keep2` | 53522493 |
+| 2 | 0.45485 | `submission_1096_d33r_dedup_exact_keep1` | 53522411 |
+| 3 | 0.45468 | `submission_1098_d33r_blank_duplicate_text_keep_boxes` | 53522525 |
+| 4 | 0.45187 | `submission_1076_d33_source_university_day25_else_d32best` | 53520977 |
+| 5 | 0.45187 | `submission_1083_d33r_source_university_dictation_day25_else_d32best` | 53521315 |
+| 6 | 0.45187 | `submission_1086_d33r_source_university_day25_archive_top12_else_d32best` | 53521389 |
+| 7 | 0.45187 | `submission_1087_d33r_source_university_day25_archive_top11_else_d32best` | 53521419 |
+| 8 | 0.45187 | `submission_1088_d33r_source_university_day25_dictation_top12_else_d32best` | 53521474 |
+| 9 | 0.45187 | `submission_1089_d33r_source_university_day25_dictation_top10_else_d32best` | 53521493 |
+| 10 | 0.45185 | `submission_1082_d33r_source_university_archive_day25_else_d32best` | 53521276 |
 
 ## Notes
 
@@ -95,6 +97,7 @@ geometry expansion.
 - Sparse02 interaction on asymmetric y-edge best cells improved the tracked best to `0.45182`; direct top/bottom extrapolation mostly dropped, while densemin13, sortybucket, and floor-out tied but did not improve.
 - Sparse02 plateau refinement did not improve beyond `0.45182`; sparse02 widened the best plateau across many top/bottom anchors, while bottom extrapolation stayed weak and densemin12/13, sortybucket, and floor-out only tied.
 - Sparse plateau edge recovery did not improve beyond `0.45182`; sparse03 collapsed to the raw-score band, rows300-336 was negative, and densemin11 plus small x/y scale moves only tied.
+- Source-routing probes found only a tiny university-specific gain, while raw zero-shot source substitution was sharply negative. Duplicate-text cleanup became the next useful lever: keeping up to two exact duplicates improved the tracked best to `0.45563`, while broader repeated-text deletion was too aggressive.
 - Dense correction followed by NMS was consistently weaker.
 - Uniform y-edge expansion was negative; the useful geometry change was selective expansion for dense rows only.
 - Further postprocessing should refine the dense-row geometry expansion around the NMS360 and low-Cyrillic min13 plateau.
