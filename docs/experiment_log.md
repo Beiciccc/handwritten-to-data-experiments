@@ -11,6 +11,7 @@ geometry expansion.
 
 | Batch | Best score | Submission | Ref |
 |---|---:|---|---:|
+| v1.6 duplicate-text page-cap refinement | 0.45646 | `submission_1112_d34_dedup_exact_keep2_pagecap10` | 53551252 |
 | v1.6 duplicate-text rescue refinement | 0.45563 | `submission_1097_d33r_dedup_exact_keep2` | 53522493 |
 | v1.6 source-routing and text-cleaning probes | 0.45187 | `submission_1076_d33_source_university_day25_else_d32best` | 53520977 |
 | v1.6 sparse02 asymmetric yedge interaction | 0.45182 | `submission_1021_d30_dense_top10_bottom18_sparse02_densemin14_nms360_min13` | 53444206 |
@@ -53,16 +54,16 @@ geometry expansion.
 
 | Rank | Public score | Submission | Ref |
 |---:|---:|---|---:|
-| 1 | 0.45563 | `submission_1097_d33r_dedup_exact_keep2` | 53522493 |
-| 2 | 0.45485 | `submission_1096_d33r_dedup_exact_keep1` | 53522411 |
-| 3 | 0.45468 | `submission_1098_d33r_blank_duplicate_text_keep_boxes` | 53522525 |
-| 4 | 0.45187 | `submission_1076_d33_source_university_day25_else_d32best` | 53520977 |
-| 5 | 0.45187 | `submission_1083_d33r_source_university_dictation_day25_else_d32best` | 53521315 |
-| 6 | 0.45187 | `submission_1086_d33r_source_university_day25_archive_top12_else_d32best` | 53521389 |
-| 7 | 0.45187 | `submission_1087_d33r_source_university_day25_archive_top11_else_d32best` | 53521419 |
-| 8 | 0.45187 | `submission_1088_d33r_source_university_day25_dictation_top12_else_d32best` | 53521474 |
-| 9 | 0.45187 | `submission_1089_d33r_source_university_day25_dictation_top10_else_d32best` | 53521493 |
-| 10 | 0.45185 | `submission_1082_d33r_source_university_archive_day25_else_d32best` | 53521276 |
+| 1 | 0.45646 | `submission_1112_d34_dedup_exact_keep2_pagecap10` | 53551252 |
+| 2 | 0.45615 | `submission_1113_d34_dedup_exact_keep2_pagecap15` | 53551282 |
+| 3 | 0.45578 | `submission_1101_d34_dedup_exact_keep3` | 53550780 |
+| 4 | 0.45577 | `submission_1114_d34_dedup_exact_keep2_pagecap20` | 53551328 |
+| 5 | 0.45572 | `submission_1102_d34_dedup_exact_keep4` | 53550839 |
+| 6 | 0.45567 | `submission_1103_d34_dedup_exact_keep5` | 53550894 |
+| 7 | 0.45563 | `submission_1097_d33r_dedup_exact_keep2` | 53522493 |
+| 8 | 0.45562 | `submission_1104_d34_dedup_exact_keep6` | 53550937 |
+| 9 | 0.45562 | `submission_1105_d34_dedup_exact_keep2_count_ge4` | 53550987 |
+| 10 | 0.45562 | `submission_1110_d34_dedup_exact_keep2_thin_groups` | 53551180 |
 
 ## Notes
 
@@ -98,6 +99,7 @@ geometry expansion.
 - Sparse02 plateau refinement did not improve beyond `0.45182`; sparse02 widened the best plateau across many top/bottom anchors, while bottom extrapolation stayed weak and densemin12/13, sortybucket, and floor-out only tied.
 - Sparse plateau edge recovery did not improve beyond `0.45182`; sparse03 collapsed to the raw-score band, rows300-336 was negative, and densemin11 plus small x/y scale moves only tied.
 - Source-routing probes found only a tiny university-specific gain, while raw zero-shot source substitution was sharply negative. Duplicate-text cleanup became the next useful lever: keeping up to two exact duplicates improved the tracked best to `0.45563`, while broader repeated-text deletion was too aggressive.
+- Duplicate-text page-cap refinement improved the tracked best to `0.45646`; keep3 was better than keep2, but the strongest variant capped keep2 deletions at 10 regions per page, showing that duplicate-heavy pages still contain some real repeated content.
 - Dense correction followed by NMS was consistently weaker.
 - Uniform y-edge expansion was negative; the useful geometry change was selective expansion for dense rows only.
 - Further postprocessing should refine the dense-row geometry expansion around the NMS360 and low-Cyrillic min13 plateau.
