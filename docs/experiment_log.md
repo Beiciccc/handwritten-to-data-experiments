@@ -4,13 +4,14 @@
 
 The tracked work started from submission-format validation and then focused on
 postprocessing public baseline outputs. The strongest improvement so far comes
-from combining the compact row/text filter with a stronger dense-region
-geometry expansion.
+from combining a public artifact ensemble with geometry-based duplicate
+suppression.
 
 ## Best By Batch
 
 | Batch | Best score | Submission | Ref |
 |---|---:|---|---:|
+| v1.6 public artifact ensemble and NMS refinement | 0.82762 | `submission_1143_d35_ensemble_nms50` | 53617781 |
 | v1.6 duplicate-text page-cap refinement | 0.45646 | `submission_1112_d34_dedup_exact_keep2_pagecap10` | 53551252 |
 | v1.6 duplicate-text rescue refinement | 0.45563 | `submission_1097_d33r_dedup_exact_keep2` | 53522493 |
 | v1.6 source-routing and text-cleaning probes | 0.45187 | `submission_1076_d33_source_university_day25_else_d32best` | 53520977 |
@@ -54,16 +55,16 @@ geometry expansion.
 
 | Rank | Public score | Submission | Ref |
 |---:|---:|---|---:|
-| 1 | 0.45646 | `submission_1112_d34_dedup_exact_keep2_pagecap10` | 53551252 |
-| 2 | 0.45615 | `submission_1113_d34_dedup_exact_keep2_pagecap15` | 53551282 |
-| 3 | 0.45578 | `submission_1101_d34_dedup_exact_keep3` | 53550780 |
-| 4 | 0.45577 | `submission_1114_d34_dedup_exact_keep2_pagecap20` | 53551328 |
-| 5 | 0.45572 | `submission_1102_d34_dedup_exact_keep4` | 53550839 |
-| 6 | 0.45567 | `submission_1103_d34_dedup_exact_keep5` | 53550894 |
-| 7 | 0.45563 | `submission_1097_d33r_dedup_exact_keep2` | 53522493 |
-| 8 | 0.45562 | `submission_1104_d34_dedup_exact_keep6` | 53550937 |
-| 9 | 0.45562 | `submission_1105_d34_dedup_exact_keep2_count_ge4` | 53550987 |
-| 10 | 0.45562 | `submission_1110_d34_dedup_exact_keep2_thin_groups` | 53551180 |
+| 1 | 0.82762 | `submission_1143_d35_ensemble_nms50` | 53617781 |
+| 2 | 0.82718 | `submission_1144_d35_ensemble_nms60` | 53617811 |
+| 3 | 0.82700 | `submission_1142_d35_ensemble_nms40` | 53617746 |
+| 4 | 0.82382 | `submission_1145_d35_ensemble_nms70` | 53617847 |
+| 5 | 0.82370 | `submission_1146_d35_ensemble_nms80` | 53617896 |
+| 6 | 0.82237 | `submission_1147_d35_ensemble_text_nms50` | 53617944 |
+| 7 | 0.82234 | `submission_1148_d35_ensemble_text_nms60` | 53618022 |
+| 8 | 0.82178 | `submission_1149_d35_ensemble_text_nms70` | 53618062 |
+| 9 | 0.81947 | `submission_1126_d35_public_sub04_ensemble` | 53616654 |
+| 10 | 0.81930 | `submission_1150_d35_ensemble_dedup_keep2_pagecap10` | 53618095 |
 
 ## Notes
 
@@ -100,6 +101,8 @@ geometry expansion.
 - Sparse plateau edge recovery did not improve beyond `0.45182`; sparse03 collapsed to the raw-score band, rows300-336 was negative, and densemin11 plus small x/y scale moves only tied.
 - Source-routing probes found only a tiny university-specific gain, while raw zero-shot source substitution was sharply negative. Duplicate-text cleanup became the next useful lever: keeping up to two exact duplicates improved the tracked best to `0.45563`, while broader repeated-text deletion was too aggressive.
 - Duplicate-text page-cap refinement improved the tracked best to `0.45646`; keep3 was better than keep2, but the strongest variant capped keep2 deletions at 10 regions per page, showing that duplicate-heavy pages still contain some real repeated content.
+- A newly available public artifact ensemble reproduced `0.81947` and became the new baseline; source routing showed the main alternate-model gain is on university pages, while archive and dictation should stay on the full-pipeline side.
+- Geometry-based NMS over the public artifact ensemble improved the tracked best to `0.82762`; the best tested threshold was near `0.50`, while same-text NMS and the previous exact-duplicate pagecap rule were weaker.
 - Dense correction followed by NMS was consistently weaker.
 - Uniform y-edge expansion was negative; the useful geometry change was selective expansion for dense rows only.
 - Further postprocessing should refine the dense-row geometry expansion around the NMS360 and low-Cyrillic min13 plateau.

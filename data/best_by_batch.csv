@@ -37,3 +37,4 @@ v1.6 sparse plateau edge recovery,0.45182,1066,submission_1066_d32_dense_top10_b
 v1.6 source-routing and text-cleaning probes,0.45187,1076,submission_1076_d33_source_university_day25_else_d32best,53520977,2026-06-10T02:28:41.590Z
 v1.6 duplicate-text rescue refinement,0.45563,1097,submission_1097_d33r_dedup_exact_keep2,53522493,2026-06-10T03:42:10.880Z
 v1.6 duplicate-text page-cap refinement,0.45646,1112,submission_1112_d34_dedup_exact_keep2_pagecap10,53551252,2026-06-11T00:14:32.647Z
+v1.6 public artifact ensemble and NMS refinement,0.82762,1143,submission_1143_d35_ensemble_nms50,53617781,2026-06-12T23:16:42.793Z
