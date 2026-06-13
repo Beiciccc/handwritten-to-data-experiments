@@ -11,6 +11,7 @@ suppression.
 
 | Batch | Best score | Submission | Ref |
 |---|---:|---|---:|
+| v1.6 public artifact source-aware NMS refinement | 0.82776 | `submission_1174_d36_ensemble_src_uni045_else050` | 53622630 |
 | v1.6 public artifact ensemble and NMS refinement | 0.82762 | `submission_1143_d35_ensemble_nms50` | 53617781 |
 | v1.6 duplicate-text page-cap refinement | 0.45646 | `submission_1112_d34_dedup_exact_keep2_pagecap10` | 53551252 |
 | v1.6 duplicate-text rescue refinement | 0.45563 | `submission_1097_d33r_dedup_exact_keep2` | 53522493 |
@@ -55,16 +56,16 @@ suppression.
 
 | Rank | Public score | Submission | Ref |
 |---:|---:|---|---:|
-| 1 | 0.82762 | `submission_1143_d35_ensemble_nms50` | 53617781 |
-| 2 | 0.82718 | `submission_1144_d35_ensemble_nms60` | 53617811 |
-| 3 | 0.82700 | `submission_1142_d35_ensemble_nms40` | 53617746 |
-| 4 | 0.82382 | `submission_1145_d35_ensemble_nms70` | 53617847 |
-| 5 | 0.82370 | `submission_1146_d35_ensemble_nms80` | 53617896 |
-| 6 | 0.82237 | `submission_1147_d35_ensemble_text_nms50` | 53617944 |
-| 7 | 0.82234 | `submission_1148_d35_ensemble_text_nms60` | 53618022 |
-| 8 | 0.82178 | `submission_1149_d35_ensemble_text_nms70` | 53618062 |
-| 9 | 0.81947 | `submission_1126_d35_public_sub04_ensemble` | 53616654 |
-| 10 | 0.81930 | `submission_1150_d35_ensemble_dedup_keep2_pagecap10` | 53618095 |
+| 1 | 0.82776 | `submission_1174_d36_ensemble_src_uni045_else050` | 53622630 |
+| 2 | 0.82771 | `submission_1156_d36_ensemble_nms490` | 53621315 |
+| 3 | 0.82766 | `submission_1166_d36_ensemble_nms500_keep_bottom` | 53622227 |
+| 4 | 0.82762 | `submission_1143_d35_ensemble_nms50` | 53617781 |
+| 5 | 0.82761 | `submission_1155_d36_ensemble_nms480` | 53621287 |
+| 6 | 0.82757 | `submission_1153_d36_ensemble_nms460` | 53621227 |
+| 7 | 0.82753 | `submission_1152_d36_ensemble_nms450` | 53621189 |
+| 8 | 0.82753 | `submission_1154_d36_ensemble_nms470` | 53621257 |
+| 9 | 0.82752 | `submission_1165_d36_ensemble_nms500_keep_top` | 53621592 |
+| 10 | 0.82751 | `submission_1157_d36_ensemble_nms510` | 53621347 |
 
 ## Notes
 
@@ -103,6 +104,7 @@ suppression.
 - Duplicate-text page-cap refinement improved the tracked best to `0.45646`; keep3 was better than keep2, but the strongest variant capped keep2 deletions at 10 regions per page, showing that duplicate-heavy pages still contain some real repeated content.
 - A newly available public artifact ensemble reproduced `0.81947` and became the new baseline; source routing showed the main alternate-model gain is on university pages, while archive and dictation should stay on the full-pipeline side.
 - Geometry-based NMS over the public artifact ensemble improved the tracked best to `0.82762`; the best tested threshold was near `0.50`, while same-text NMS and the previous exact-duplicate pagecap rule were weaker.
+- Fine NMS threshold search improved the tracked best to `0.82776`; the strongest tested variant used a lower threshold on university pages and the prior NMS threshold elsewhere, while source-only and type-only NMS were much weaker.
 - Dense correction followed by NMS was consistently weaker.
 - Uniform y-edge expansion was negative; the useful geometry change was selective expansion for dense rows only.
 - Further postprocessing should refine the dense-row geometry expansion around the NMS360 and low-Cyrillic min13 plateau.
