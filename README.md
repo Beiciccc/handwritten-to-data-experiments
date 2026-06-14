@@ -9,10 +9,10 @@ or machine-specific environment details.
 
 ## Current Best
 
-- Public score: `0.82776`
-- Submission: `submission_1174_d36_ensemble_src_uni045_else050`
-- Kaggle submission ref: `53622630`
-- Date: `2026-06-13T03:12:16.270Z`
+- Public score: `0.82786`
+- Submission: `submission_1191_d37_src_u450_s500_a480_d500`
+- Kaggle submission ref: `53685137`
+- Date: `2026-06-14T19:17:50.650Z`
 
 ## Contents
 
@@ -22,4 +22,4 @@ or machine-specific environment details.
 - `data/best_by_batch.csv` - best submission from each experiment batch.
 - `data/top_submissions.csv` - top ranked tracked submissions.
 
-Last updated: 2026-06-13 03:17:35 UTC
+Last updated: 2026-06-14 19:35:31 UTC
