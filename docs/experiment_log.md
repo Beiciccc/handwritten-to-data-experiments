@@ -2,6 +2,8 @@
 
 ## Summary
 
+The competition online stage is complete. Final tracked result: rank 36/199 with leaderboard score `0.82792`.
+
 The tracked work started from submission-format validation and then focused on
 postprocessing public baseline outputs. The strongest improvement so far comes
 from combining a public artifact ensemble with geometry-based duplicate

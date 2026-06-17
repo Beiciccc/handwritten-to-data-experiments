@@ -5,11 +5,12 @@ This public repository includes only derived metadata:
 - submission names and public leaderboard scores
 - experiment batch labels and short descriptions
 - Kaggle submission references and timestamps
+- the generated CSV files for the tied top-scoring tracked submissions
 
 The repository intentionally excludes:
 
 - competition images and annotation files
-- generated submission CSV files containing row-level predictions
+- generated submission CSV files other than the top-scoring tracked submissions
 - server names, credentials, sensitive access material, or local environment details
 - private notes about execution tooling
 
